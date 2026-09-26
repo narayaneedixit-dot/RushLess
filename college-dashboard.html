@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="topbar">
+            <span class="logo">RushLess</span>
+            <a href="pip/logout.php" class="logout">Logout</a>
+        </div>
+        <div class="page">
+            <h2>Registered Outlets</h2>
+            <div class="outlets-table" id="outletTable"></div>
+        </div>
+        <form class="form-box" id="outletForm">
+            <h3 id="formTitle">Register an Outlet</h3>
+            <p class="small-text">College account only. The outlet will log in with the email and password you set here.</p>
+            <input type="hidden" id="outlet.id" name="outlet_id" value="">
+            <label>Category</label>
+            <select id="category" name="category">
+                <option value="canteen">CAnteen</option>
+                <option value="stationary">Stationary</option>
+            </select>
+            <label>Outlet Name</label>
+            <input type="file" id="outlet_name" name="outlet_name" placeholder="e.g. Main Campus Canteen">
+            
+            <label>Outlet Photo</label>
+            <input type="file" id="outlet_photo" name="outlet_photo" accept="image/*">
+            
+            <label>Outlet Login Email</label>
+            <input type="text" id="email" name="email" palceholder="canteen1@rushless.com">
+
+            <label>Outlet Password</label>
+            <input type="text" id="password" name="password"
+            <p class="small-text" id="passNote"></p>
+
+            <h4>Menu</h4>
+            <p class="small-text"></p>
+
+            <div id="menuList">
+                <div class="menu-row">
+                    <input type="text" name="item_name[]" class="item-name" placeholder="Item name">
+                    <input type="number" name="item_price[]" class="item-price" placeholder="Price">
+                    <input type="number" name="item_prep[]" class="item-prep" placeholder="Prep min" step="0.5">
+                    <button type="button" class="remove-btn" onclick="removeItem(this)">X</button>
+                </div>
+
+            </div>
+            <button type="button" class="add-btn" onclick="addItem()">+ Add Item</button>
+            
+            <button type="submit" class="main-btn" id="saveBtn">Register Outlet</button>
+            <button type="button" class="add-btn" id="cancelBtn" onclick="resetForm()" style="display:none">Cancel edit</button>
+            
+            <p class="error" id="msg"></p>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>

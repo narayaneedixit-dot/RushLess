@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+
+<div class="topbar">
+    <a href="home.html" class="logo">RushLess</a>
+    <a href="php/logout.php" class="logout">Logout</a>
+</div>
+
+<div class="page">
+
+    <h2>Find Food Across Outlets</h2>
+    <p class="small-text">Search for an item to see open outlets where it is currently in stock.</p>
+
+    <div class="card-box">
+        <div class="row" style="grid-template-columns:1fr auto;align-items:end">
+            <div>
+                <label for="searchText">Item</label>
+                <input type="text" id="searchText" placeholder="e.g. Maggi">
+            </div>
+            <button type="button" id="searchBtn">Search</button>
+        </div>
+        <p class="error" id="searchMsg"></p>
+    </div>
+
+    <div id="searchResults"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

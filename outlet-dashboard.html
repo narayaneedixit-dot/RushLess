@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="topbar">
+            <span class="logo">RuahLess</span>
+            <a href="php/logout.php" class="logout">Logout</a>
+        </div>
+
+        <div class="page">
+            <div class="outlet-row">
+                <div>
+                  <h2 id="outletTitle" style="margin:0"></h2>
+                  <span class="small-text" id="statusText"></span>   
+                </div>
+                <button class="main-btn" id="toggleBtn" style="width:auto;margin:0">Open / Close</button>
+            </div>
+
+            <div class="stats-row" id="statsRow"></div>
+
+            <h3>Live Queue</h3>
+            <div id="queueBox"></div>
+
+            <p class="small-text">Edit Item</p>
+
+            <form id="menuForm" class="card-box">
+              <div id="myMenu"></div>
+              <button type="button" class="add-btn" onclick="addMenuRow()">+ Add Item</button>
+              <button type="submit" class="main-btn" style="width:auto">Save Menu</button>
+              <p class="error" id="menuMsg"></p>
+    </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
