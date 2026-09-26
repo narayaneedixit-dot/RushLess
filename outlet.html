@@ -1,26 +1,49 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="topbar">
-            <a href="home.html" class="logo">RushLess</a>
-            <a href="php/logout.php" class="logout">Logout</a>
-        </div>
-        <div class="page">
-            <h2 id="outletName"></h2>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <div class="menu-list" id="menuList2"></div>
+<body>
 
-            <div class="cart-box" id="cartBox">
-              <h3>Your Cart</h3>
-              <div id="cartLines"></div>
-              <button class="main-btn" id="proceedBtn">Proceed</button>
-              <p class="error" id="msg"></p>
-            </div>
+<div class="topbar">
+    <a href="home.html" class="logo">RushLess</a>
+    <a href="php/logout.php" class="logout">Logout</a>
+</div>
 
-            <div id="tokenBox"></div>
-        </div>
-        <script src="script.js"></script>
-    </body>
+<div class="page">
+
+    <h2 id="outletName"></h2>
+
+    <div class="menu-list" id="menuList2"></div>
+
+    <div class="cart-box" id="cartBox">
+        <h3>Your Cart</h3>
+        <div id="cartLines"></div>
+        <button class="main-btn" id="proceedBtn">Proceed</button>
+        <p class="error" id="msg"></p>
+    </div>
+
+    <div id="tokenBox"></div>
+
+</div>
+
+
+<div class="chat-box is-minimized" id="chatBox">
+    <div class="chat-head">
+        <span>Ask RushLess</span>
+        <button type="button" class="chat-minimize" id="chatMinimize" aria-label="Expand" aria-expanded="false" title="Expand">+</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="faq-list" id="faqList">
+        <button type="button" class="faq-btn" data-q="order status">Where is my order?</button>
+        <button type="button" class="faq-btn" data-q="how long">How much longer will it take?</button>
+        <button type="button" class="faq-btn" data-q="open outlets">Which outlets are open?</button>
+        <button type="button" class="faq-btn" data-q="fastest">What can I get fastest?</button>
+        <button type="button" class="faq-btn" data-q="rush">When is it busiest?</button>
+        <button type="button" class="faq-btn" data-q="how it works">How does RushLess work?</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
