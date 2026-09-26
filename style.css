@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+    font-family: Arial, "Segoe UI", sans-serif;
+    background: #f4f6f8;
+    color: #1c2530;
+    line-height: 1.5;
+}
+
 .topbar {
     display: flex;
     justify-content: flex-start;
@@ -61,6 +69,8 @@
     color: #003b6f;
     font-size: 13px;
 }
+
+/* ---------- Login aur signup pages ---------- */
 
 .login-page {
     text-align: center;
@@ -175,6 +185,8 @@ input, select {
     cursor: pointer;
 }
 
+/* ---------- Outlet aur menu pages ---------- */
+
 .page {
     width: 700px;
     margin: 20px auto;
@@ -255,6 +267,8 @@ input, select {
     padding: 7px 14px;
     font-size: 13px;
 }
+
+/* ---------- Cart aur token ---------- */
 
 .cart-box {
     background: #fff;
@@ -357,6 +371,9 @@ input, select {
     color: #8a97a5;
 }
 
+
+/* ---------- Phase 1: stats, status rang, ready alert ---------- */
+
 .stats-row {
     display: flex;
     gap: 12px;
@@ -422,6 +439,9 @@ input, select {
     color: #1d5c39;
 }
 
+
+/* ---------- Phase 2: walk-in aur accuracy ---------- */
+
 .tag-walkin {
     display: inline-block;
     font-size: 11px;
@@ -460,4 +480,343 @@ input, select {
 
 .acc-row:last-child {
     border-bottom: 0;
+}
+
+
+/* ---------- Rule-based chatbot ---------- */
+
+.chat-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #d3dce5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #21618c;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.chat-minimize {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 26px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.chat-minimize:hover {
+    background: rgba(255, 255, 255, .24);
+}
+
+.chat-box.is-minimized {
+    width: 220px;
+}
+
+.chat-box.is-minimized .chat-body,
+.chat-box.is-minimized .faq-list {
+    display: none;
+}
+
+.chat-body {
+    height: 210px;
+    overflow-y: auto;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+
+.chat-line {
+    margin-bottom: 8px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    line-height: 1.4;
+}
+
+.chat-line.bot {
+    background: #eef1f4;
+    color: #1c2530;
+}
+
+.chat-line.me {
+    background: #e3eef6;
+    color: #003b6f;
+    margin-left: 30px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 9px;
+    border-top: 1px solid #eef1f4;
+}
+
+.faq-btn {
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 13px;
+    background: #f4f6f8;
+    color: #21618c;
+    border: 1px solid #d3dce5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq-btn:hover {
+    background: #e7edf2;
+}
+
+@media (max-width: 700px) {
+    .chat-box { position: static; width: auto; margin: 20px; }
+}
+
+
+/* ---------- Food search ---------- */
+
+.search-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid #d3dce5;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+.search-eta {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 14px;
+    background: #21618c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.btn-link:hover {
+    background: #164766;
+}
+
+
+/* ---------- Rating ---------- */
+
+.rate-area {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #55606c;
+}
+
+.stars {
+    color: #e8a33d;
+    letter-spacing: 1px;
+}
+
+.star-btn {
+    color: #e8a33d;
+    font-size: 19px;
+    cursor: pointer;
+    padding: 0 1px;
+}
+
+.star-btn:hover {
+    color: #c9831c;
+}
+
+
+/* ---------- Equipment ---------- */
+
+.item-equipment {
+    min-width: 130px;
+    padding: 7px 8px;
+    font-size: 13px;
+}
+
+.equip-name {
+    flex: 1;
+}
+
+.equip-qty {
+    width: 90px;
+}
+
+
+
+/* Campus-wide food search embedded on the Canteen Outlets page */
+.campus-search {
+    margin: 18px 0 22px;
+    border-radius: 12px;
+}
+
+.campus-search .search-hint {
+    margin: 0 0 12px;
+}
+
+.campus-search-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.campus-search-row input {
+    min-width: 0;
+    min-height: 42px;
+}
+
+.campus-search-row button {
+    min-height: 42px;
+    padding: 0 20px;
+    background: #21618c;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.campus-search-row button:hover {
+    background: #164766;
+}
+
+.campus-search-results:empty {
+    display: none;
+}
+
+.campus-search-results {
+    margin-bottom: 22px;
+}
+
+@media (max-width: 740px) {
+    .page {
+        width: auto;
+        margin: 20px 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .campus-search-row {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-search-row button {
+        width: 100%;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-eta {
+        text-align: left;
+        white-space: normal;
+    }
+}
+
+
+/* College outlet registration: clearer vertical form layout */
+#outletForm {
+    width: min(calc(100% - 36px), 680px);
+    margin: 36px auto 64px;
+}
+
+#outletForm h4 {
+    margin: 28px 0 14px;
+}
+
+#equipList, #menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 12px 0 16px;
+}
+
+#outletForm .menu-row {
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid #d3dce5;
+    border-radius: 14px;
+    background: #fbfdff;
+}
+
+#equipList .menu-row {
+    grid-template-columns: minmax(0, 1fr) 110px 42px;
+}
+
+#menuList .menu-row {
+    grid-template-columns: minmax(0, 1fr) minmax(100px, 140px);
+}
+
+#menuList .item-name,
+#menuList .item-equipment {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+}
+
+#menuList .item-price,
+#menuList .item-prep {
+    width: 100%;
+    min-width: 0;
+}
+
+#outletForm .remove-btn {
+    width: 42px;
+    min-height: 44px;
+    justify-self: end;
+}
+
+#outletForm .add-btn {
+    margin: 0 0 12px;
+}
+
+#outletForm #saveBtn {
+    margin-top: 22px;
+}
+
+@media (max-width: 520px) {
+    #outletForm {
+        width: calc(100% - 24px);
+        padding: 20px;
+    }
+    #equipList .menu-row {
+        grid-template-columns: minmax(0, 1fr) 84px 38px;
+        gap: 8px;
+        padding: 12px;
+    }
+    #menuList .menu-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 10px;
+        padding: 12px;
+    }
+    #outletForm .remove-btn {
+        width: 38px;
+    }
 }

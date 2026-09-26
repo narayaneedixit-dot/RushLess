@@ -1,16 +1,50 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="topbar">
-            <a href="home.html" class="logo">RushLess</a>
-            <a href="php/logout.php" class="logout">Logout</a>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <a href="home.html" class="logo">RushLess</a>
+    <a href="php/logout.php" class="logout">Logout</a>
+</div>
+
+<div class="page">
+
+    <h2>Canteen Outlets</h2>
+
+    <div class="card-box campus-search">
+        
+        <div class="campus-search-row">
+            <input type="text" id="searchText" placeholder="Search for an item, e.g. Maggi" aria-label="Search food across outlets">
+            <button type="button" id="searchBtn">Search</button>
         </div>
-        <div class="page">
-            <h2>Canteen Outlets</h2>
-            <div class="outlet-list" id="outletList"></div>
-        </div>
-        <script src="script.js"></script>
-    </body>
+        <p class="error" id="searchMsg" aria-live="polite"></p>
+    </div>
+
+    <div id="searchResults" class="campus-search-results"></div>
+    <div class="outlet-list" id="outletList"></div>
+
+</div>
+
+
+<div class="chat-box is-minimized" id="chatBox">
+    <div class="chat-head">
+        <span>Ask RushLess</span>
+        <button type="button" class="chat-minimize" id="chatMinimize" aria-label="Expand" aria-expanded="false" title="Expand">+</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="faq-list" id="faqList">
+        <button type="button" class="faq-btn" data-q="order status">Where is my order?</button>
+        <button type="button" class="faq-btn" data-q="how long">How much longer will it take?</button>
+        <button type="button" class="faq-btn" data-q="open outlets">Which outlets are open?</button>
+        <button type="button" class="faq-btn" data-q="fastest">What can I get fastest?</button>
+        <button type="button" class="faq-btn" data-q="rush">When is it busiest?</button>
+        <button type="button" class="faq-btn" data-q="how it works">How does RushLess work?</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>

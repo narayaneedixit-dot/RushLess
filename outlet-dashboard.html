@@ -1,36 +1,54 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="topbar">
-            <span class="logo">RuahLess</span>
-            <a href="php/logout.php" class="logout">Logout</a>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <span class="logo">RushLess</span>
+    <a href="php/logout.php" class="logout">Logout</a>
+</div>
+
+<div class="page">
+
+    <div class="outlet-row">
+        <div>
+            <h2 id="outletTitle" style="margin:0"></h2>
+            <span class="small-text" id="statusText"></span>
         </div>
+        <button class="main-btn" id="toggleBtn" style="width:auto;margin:0">Open / Close</button>
+    </div>
 
-        <div class="page">
-            <div class="outlet-row">
-                <div>
-                  <h2 id="outletTitle" style="margin:0"></h2>
-                  <span class="small-text" id="statusText"></span>   
-                </div>
-                <button class="main-btn" id="toggleBtn" style="width:auto;margin:0">Open / Close</button>
-            </div>
+    <div class="stats-row" id="statsRow"></div>
 
-            <div class="stats-row" id="statsRow"></div>
+    <h3>Live Queue</h3>
+    <div id="queueBox"></div>
 
-            <h3>Live Queue</h3>
-            <div id="queueBox"></div>
+    <p class="error" id="msg"></p>
 
-            <p class="small-text">Edit Item</p>
+    <h3>Walk-in Order</h3>
+    <p class="small-text">Counter par aaye customer ka order yahan daalo, taaki queue ka hisaab sahi rahe.</p>
 
-            <form id="menuForm" class="card-box">
-              <div id="myMenu"></div>
-              <button type="button" class="add-btn" onclick="addMenuRow()">+ Add Item</button>
-              <button type="submit" class="main-btn" style="width:auto">Save Menu</button>
-              <p class="error" id="menuMsg"></p>
+    <div class="card-box">
+        <div id="walkinMenu"></div>
+        <div id="walkinCart"></div>
+        <button type="button" class="main-btn" style="width:auto" id="walkinBtn">Add Walk-in Order</button>
+        <p class="error" id="walkinMsg"></p>
+    </div>
+
+    <h3>My Menu</h3>
+    <p class="small-text">Price ya prep time badlo, nayi item jodo, ya kisi item ko out of stock kar do.</p>
+
+    <form id="menuForm" class="card-box">
+        <div id="myMenu"></div>
+        <button type="button" class="add-btn" onclick="addMenuRow()">+ Add Item</button>
+        <button type="submit" class="main-btn" style="width:auto">Save Menu</button>
+        <p class="error" id="menuMsg"></p>
     </form>
-        </div>
-        <script src="script.js"></script>
-    </body>
+
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
